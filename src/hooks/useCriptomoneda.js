@@ -30,7 +30,7 @@ const useCripto = (label, stateInicial, opcionMoneda) => {
         <option value=""> -Seleccione-</option>
 
         {opcionMoneda.map((opcion) => (
-          <option value={opcion.CoinInfo.id} key={opcion.CoinInfo.Name}>
+          <option key={opcion.CoinInfo.Id} value={opcion.CoinInfo.Name}>
             {opcion.CoinInfo.FullName}
           </option>
         ))}

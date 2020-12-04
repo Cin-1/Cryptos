@@ -22,7 +22,7 @@ const Boton = styled.input`
   }
 `;
 
-const Formulario = () => {
+const Formulario = ({ guardarCriptomoneda, guardarMoneda }) => {
   const [listacripto, guardarCripto] = useState([]);
   const [error, guardarError] = useState(false);
   const MONEDAS = [
@@ -31,8 +31,8 @@ const Formulario = () => {
       nombre: "Dolar de Estados Unidos",
     },
     {
-      codigo: "MXN",
-      nombre: "Peso  Mexicano",
+      codigo: "ARS",
+      nombre: "Peso  Argentino",
     },
     {
       codigo: "EUR",
@@ -72,6 +72,8 @@ const Formulario = () => {
       return;
     }
     guardarError(false);
+    guardarCriptomoneda(criptomoneda);
+    guardarMoneda(moneda);
   };
 
   return (
