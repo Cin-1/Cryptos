@@ -15,4 +15,4 @@ const Error1 = ({ mensaje }) => {
   return <MensajeError>{mensaje}</MensajeError>;
 };
 
-export default Error;
+export default Error1;
